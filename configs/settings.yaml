@@ -1,0 +1,53 @@
+project:
+  name: ResearchLens
+  version: 0.1.0
+  environment: development
+
+data:
+  source:
+    - arxiv
+    - openalex
+
+  max_papers: 3000
+
+  paths:
+    raw: data/raw
+    processed: data/processed
+    evaluation: data/evaluation
+
+retrieval:
+  default_method: hybrid
+
+  top_k:
+    bm25: 50
+    dense: 50
+    reranker: 10
+
+  hybrid:
+    fusion_method: rrf
+    rrf_k: 60
+
+embedding:
+  model_name: BAAI/bge-base-en-v1.5
+  batch_size: 16
+
+reranker:
+  model_name: BAAI/bge-reranker-v2-m3
+
+llm:
+  provider: gemini
+  temperature: 0.1
+  max_output_tokens: 2048
+
+evaluation:
+  retrieval_metrics:
+    - precision
+    - recall
+    - mrr
+    - ndcg
+
+  rag_metrics:
+    - faithfulness
+    - answer_relevance
+    - citation_precision
+    - claim_support_rate

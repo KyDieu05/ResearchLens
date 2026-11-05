@@ -1,0 +1,55 @@
+# =========================
+# Core
+# =========================
+numpy
+pandas
+python-dotenv
+pydantic
+pydantic-settings
+PyYAML
+tqdm
+
+# =========================
+# Information Retrieval
+# =========================
+rank-bm25
+scikit-learn
+sentence-transformers
+faiss-cpu
+
+# =========================
+# NLP & LLM
+# =========================
+transformers
+torch
+google-genai
+
+# =========================
+# Document Ingestion
+# =========================
+requests
+httpx
+beautifulsoup4
+feedparser
+pymupdf
+pymupdf4llm
+
+# =========================
+# Backend
+# =========================
+fastapi
+uvicorn[standard]
+python-multipart
+
+# =========================
+# Evaluation
+# =========================
+ranx
+ragas
+
+# =========================
+# Development & Testing
+# =========================
+pytest
+pytest-cov
+ruff

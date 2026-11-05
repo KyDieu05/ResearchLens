@@ -1,0 +1,98 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# =========================
+# Virtual Environment
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE & Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Jupyter Notebook
+# =========================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# =========================
+# Data
+# =========================
+data/raw/*
+!data/raw/.gitkeep
+
+data/processed/*
+!data/processed/.gitkeep
+
+data/evaluation/*
+!data/evaluation/.gitkeep
+
+# =========================
+# Model Weights & Checkpoints
+# =========================
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.gguf
+models/
+checkpoints/
+
+# =========================
+# Vector Database & Index
+# =========================
+storage/*
+!storage/.gitkeep
+
+*.faiss
+*.index
+chroma_db/
+qdrant_storage/
+*.sqlite3
+
+# =========================
+# Logs & Cache
+# =========================
+*.log
+logs/
+.cache/
+cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# Build & Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini

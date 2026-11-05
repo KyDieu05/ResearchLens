@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "researchlens"
+version = "0.1.0"
+description = "A trustworthy academic research assistant powered by hybrid IR and RAG."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "ingestion*",
+    "retrieval*",
+    "rag*",
+    "truth_reader*",
+    "evaluation*",
+    "backend*",
+    "common*"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
